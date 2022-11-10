@@ -1,0 +1,130 @@
+body {
+    .ant-input {
+        border-color: @border-color-base;
+        padding: 6px 12px;
+        box-shadow: none !important;
+        color: @text-color;
+        &[disabled] {
+            background-color: @aibp-input-disabled-bg;
+            color: @aibp-disabled-color;
+        }
+        &:focus {
+            border-color: @primary-color;
+        }
+    }
+
+    .ant-input-lg {
+        padding: 8px 12px;
+    }
+    .ant-input-password {
+        border-color: @border-color-base;
+        box-shadow: none !important;
+    }
+
+    .ant-input-search {
+        box-shadow: none;
+        border-color: @border-color-base;
+        &:focus,
+        &:focus-within {
+            border-color: @primary-color;
+            background-color: rgba(17, 142, 238, .05);
+            .ant-input {
+                background-color: transparent;
+            }
+        }
+        &.ant-input-affix-wrapper:focus,
+        &.ant-input-affix-wrapper:focus-within,
+        &.ant-input-affix-wrapper:hover {
+            .ant-input-suffix,
+            .ant-input-suffix * {
+                color: @primary-color;
+            }
+        }
+        .ant-input-search-icon {
+            &::before {
+                display: none;
+            }
+            &::after {
+                content: "\e601";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                font-size: 12px;
+                bottom: auto;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    .ant-input-group-wrapper {
+        outline: none;
+        box-shadow: none;
+
+        .ant-input-group-addon {
+            padding: 0 12px;
+            line-height: inherit;
+            background-color: @aibp-input-addon-bg;
+        }
+
+        .ant-input-group-addon,
+        .ant-input-affix-wrapper {
+            border-color: @border-color-base;
+        }
+        .ant-input-group-addon:first-child {
+            border-right: none;
+        }
+        .ant-input-group-addon .ant-select-selection {
+            border: none;
+        }
+        .ant-input:not(:first-child),
+        .ant-input-group-addon:last-child,
+        .ant-input-group-addon + .ant-input-affix-wrapper {
+            border-left: none;
+        }
+        &:hover {
+            .ant-input-group-addon,
+            .ant-input-affix-wrapper {
+                background-color: @disabled-disabled-bg-dark;
+            }
+            .ant-input-group-addon,
+            .ant-input,
+            .ant-input-affix-wrapper .ant-input {
+                border-color: @primary-color;
+            }
+        }
+        &:focus,
+        &:focus-within {
+            .ant-input-group-addon {
+                color: @primary-color;
+                border-color: @primary-color;
+                background-color: @disabled-disabled-bg-dark;
+                .ant-select-selection-item,
+                .ant-select-arrow {
+                    color: @primary-color;
+                }
+            }
+            .ant-input {
+                border-color: @primary-color;
+                background-color: rgba(17, 142, 238, .05);
+            }
+            .ant-input-affix-wrapper,
+            .ant-input-affix-wrapper-focused {
+                box-shadow: none;
+                border-color: @primary-color;
+                background-color: rgba(17, 142, 238, .05);
+                .ant-input {
+                    background-color: transparent;
+                }
+                .ant-input-suffix,
+                .ant-input-suffix * {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+
+    textarea.ant-input {
+        padding: 6px 12px;
+        line-height: 20px;
+    }
+}

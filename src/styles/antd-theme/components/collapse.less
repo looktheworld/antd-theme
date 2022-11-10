@@ -1,0 +1,29 @@
+body {
+    .ant-collapse {
+        border-radius: @aibp-collapse-border-radius;
+        .ant-collapse-item {
+            .ant-collapse-arrow svg,
+            .ant-collapse-arrow::after {
+                transition: transform .48s;
+            }
+
+            &.ant-collapse-item-active {
+                .ant-collapse-arrow svg,
+                .ant-collapse-arrow::after {
+                    transform: rotate(90deg);
+                }
+            }
+
+            .ant-collapse-header {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            &-disabled {
+                .ant-collapse-header {
+                    background: @aibp-collapse-header-disabled-bg;
+                    color: @aibp-collapse-header-disabled-color;
+                }
+            }
+        }
+    }
+}

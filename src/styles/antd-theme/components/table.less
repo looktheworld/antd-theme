@@ -1,0 +1,110 @@
+body {
+    .ant-table {
+        thead > tr > th {
+            font-weight: normal;
+            border-bottom: none;
+            border-right: 1px solid #fff;
+
+            &.ant-table-selection-column {
+                border-right: 0;
+            }
+
+            &.ant-table-column-has-sorters {
+                &:hover {
+                    background: @table-header-bg !important;
+                }
+                .ant-table-column-sorters {
+                    &:hover {
+                        &::before {
+                            background: none;
+                        }
+                    }
+                    .ant-table-column-sorter {
+                        position: relative;
+                        .ant-table-column-sorter-inner-full {
+                            margin-top: -.5em;
+                        }
+                        .anticon,
+                        .anticon * {
+                            font-size: 16px;
+                            height: 16px;
+                            width: 16px;
+                        }
+                        .ant-table-column-sorter-up,
+                        .ant-table-column-sorter-down {
+                            color: @text-color-secondary;
+                            height: 1em;
+                            &.off {
+                                display: none;
+                            }
+                            &.on {
+                                color: @primary-color;
+                            }
+                        }
+                        .ant-table-column-sorter-up.off + .ant-table-column-sorter-down.off {
+                            display: inline-block;
+                            top: -1px;
+
+                            &::after {
+                                content: "\e711";
+                            }
+                        }
+                    }
+                }
+            }
+            &.ant-table-column-has-filters {
+                .anticon-filter {
+                    position: relative;
+                    height: 14px;
+                    padding-left: 4px;
+
+                    &:hover,
+                    &.ant-table-filter-open {
+                        color: @aibp-table-filter-active !important;
+                        background: @table-header-bg !important;
+                    }
+                    &::after {
+                        top: 9px;
+                    }
+                }
+            }
+        }
+        thead > tr > th,
+        tfoot > tr > th,
+        tfoot > tr > td,
+        tbody > tr > td {
+            padding: 10px 12px;
+            line-height: 20px;
+        }
+        thead th.ant-table-column-has-sorters:hover {
+            background: @table-header-bg;
+        }
+        td.ant-table-column-sort {
+            background: inherit;
+        }
+
+        .ant-table-tbody > tr.ant-table-row-selected > td {
+            background: inherit;
+            border-color: @border-color-split;
+        }
+        .ant-table-filter-column {
+            .ant-table-filter-column-title {
+                flex: initial;
+                padding: 11px 8px 11px 11px;
+            }
+            .ant-table-filter-trigger-container {
+                &:hover,
+                &.ant-table-filter-trigger-container-open {
+                    background: none;
+                }
+
+                position: static;
+                display: block;
+                .ant-table-filter-trigger {
+                    height: 100%;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

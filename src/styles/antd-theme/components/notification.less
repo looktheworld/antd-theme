@@ -1,0 +1,45 @@
+body {
+    .ant-notification {
+        color: @text-color;
+        border: none;
+        .ant-notification-notice {
+            width: auto;
+            min-width: 300px;
+            max-width: 400px;
+            border: 0;
+            box-shadow: @shadow-1;
+            padding: 6px 16px;
+            line-height: 20px;
+        }
+        .ant-notification-notice-icon {
+            font-size: 16px;
+            margin-left: 0;
+        }
+        .ant-notification-notice-close {
+            top: 6px;
+            right: 16px;
+            color: @text-color-secondary;
+            line-height: 20px;
+            .ant-notification-close-icon {
+                font-size: 14px !important;
+                width: 14px;
+            }
+        }
+        .ant-notification-notice-message,
+        .ant-notification-notice-description {
+            line-height: 20px;
+            font-size: 12px;
+        }
+        .ant-notification-notice-message {
+            margin-bottom: 0;
+            line-height: 22px;
+            word-break: break-word;
+        }
+        .ant-notification-notice-with-icon {
+            .ant-notification-notice-message,
+            .ant-notification-notice-description {
+                margin-left: 24px;
+            }
+        }
+    }
+}

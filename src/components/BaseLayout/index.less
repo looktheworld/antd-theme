@@ -1,0 +1,130 @@
+.base-layout-wrap {
+    height: calc(100vh - 56px);
+    overflow: auto;
+    margin: -16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: @G10;
+
+    // header区域
+    .base-layout-header {
+        background: @white;
+    }
+    // content区域
+    .base-layout-content {
+        flex: 1;
+        margin: 16px;
+        padding: 24px 24px 0 24px;
+        border-radius: 4px;
+        background: @white;
+        // tabs布局
+        &.base-layout-tabs-wrap {
+            margin: 0;
+            padding: 0;
+            background: @G10;
+            .ant-tabs.ant-tabs-line {
+                margin-top: 0 !important;
+                .ant-tabs-bar {
+                    margin-bottom: 0;
+                    padding: 0 16px;
+                    background: @white;
+                    border-bottom: 0;
+                    .ant-tabs-tab {
+                        padding-top: 0;
+                    }
+                }
+                .ant-tabs-content {
+                    background: @G10;
+                    .ant-tabs-tabpane {
+                        padding: 24px 24px 0 24px;
+                        border: 16px solid @G10;
+                        border-radius: 22px;
+                        background: @white;
+                        &.ant-tabs-tabpane-inactive {
+                            border: 0;
+                        }
+                    }
+                }
+            }
+            &.base-layout-card-wrap {
+                .ant-tabs.ant-tabs-line {
+                    .ant-tabs-content {
+                        background: transparent;
+                        .ant-tabs-tabpane {
+                            padding: 16px;
+                            border: 0;
+                            background: transparent;
+                            .aibp-list {
+                                padding: 24px 24px 0 24px;
+                                border-radius: 6px;
+                                &.base-hooks-list-padding {
+                                    & + .base-hooks-list-page {
+                                        padding-left: 24px;
+                                        padding-right: 24px;
+                                    }
+                                }
+                            }
+                            .base-hooks-list-wrap {
+                                border-radius: 6px;
+                                .base-hooks-list-page {
+                                    border-radius: 6px;
+                                }
+                            }
+                            // mode为tabs-card时的描述
+                            &.ant-tabs-tabpane-active {
+                                & > .base-layout-tabs-introduction {
+                                    display: block;
+                                    position: relative;
+                                    margin: -16px -16px 16px -16px;
+                                    padding: 16px;
+                                    background: @white;
+                                    &::before {
+                                        position: absolute;
+                                        top: 0;
+                                        height: 1px;
+                                        width: calc(100% - 32px);
+                                        content: '';
+                                        background-color: @border-color-base;
+                                    }
+                                }
+                                & > .base-hooks-list-wrap {
+                                    & > .base-hooks-list-page {
+                                        padding-left: 16px;
+                                        padding-right: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.base-layout-card-wrap {
+            padding: 0;
+            background: transparent;
+
+            .aibp-form-container {
+                margin: 16px 0;
+                background: #fff;
+                border: 0;
+                border-radius: 6px;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+                &:last-of-type {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+
+        // 公用的card的容器类样式
+        .base-layout-common-card {
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 6px;
+            border: 0;
+        }
+    }
+}

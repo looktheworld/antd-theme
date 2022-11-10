@@ -1,0 +1,36 @@
+body {
+    .ant-switch {
+        background-color: @aibp-switch-default-bg;
+        &:hover,
+        &:focus {
+            background-color: @aibp-switch-hover-bg;
+        }
+        &.ant-switch-checked {
+            background-color: @primary-color;
+            &:hover,
+            &:focus {
+                background-color: @aibp-switch-checked-hover-bg;
+            }
+        }
+        &.ant-switch-disabled {
+            background-color: @aibp-disabled-border;
+            &::after {
+                background-color: @aibp-disabled-bg;
+            }
+            &,
+            .ant-switch-inner {
+                color: @aibp-disabled-color;
+            }
+            &.ant-switch-checked {
+                background-color: @aibp-switch-checked-disabled-bg;
+                &::after {
+                    background-color: #fff;
+                }
+                &,
+                .ant-switch-inner {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

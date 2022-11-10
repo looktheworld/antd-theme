@@ -1,0 +1,30 @@
+body {
+    .ant-picker {
+        &.ant-picker-disabled {
+            border-color: @border-color-split;
+        }
+    }
+
+    .ant-calendar.ant-calendar-range.ant-calendar-time {
+        .ant-calendar-date-panel {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .ant-calendar-time-picker {
+            top: 35px;
+        }
+        .ant-calendar-body {
+            padding-bottom: 0;
+        }
+        .ant-calendar-footer {
+            z-index: 100;
+        }
+    }
+    .ant-calendar-picker-container {
+        .ant-calendar-today {
+            .ant-calendar-date {
+                font-weight: @font-weight-base;
+            }
+        }
+    }
+}

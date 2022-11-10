@@ -1,0 +1,32 @@
+body {
+    .ant-time-picker {
+        .ant-time-picker-input {
+            &[disabled] {
+                background-color: @aibp-disabled-bg;
+                border-color: @aibp-disabled-border;
+                color: @aibp-disabled-color;
+                & + .ant-time-picker-icon {
+                    color: @aibp-disabled-color;
+                }
+            }
+        }
+    }
+    .ant-time-picker-panel,
+    .ant-calendar-picker-container {
+        .ant-time-picker-panel-select {
+            ul > li {
+                text-align: center;
+                &.ant-time-picker-panel-select-option-selected {
+                    background: @aibp-timePicker-selected-bg;
+                }
+            }
+        }
+        .ant-calendar-disabled-cell {
+            &,
+            .ant-calendar-date {
+                color: @aibp-disabled-color !important;
+                background: @aibp-disabled-bg;
+            }
+        }
+    }
+}

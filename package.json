@@ -1,0 +1,20 @@
+{
+    "name": "base-antd-theme",
+    "version": "1.0.1",
+    "description": "自定义antd3.x的主题样式",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/looktheworld/antd-theme.git"
+    },
+    "keywords": [],
+    "author": "look_look",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/looktheworld/antd-theme/issues"
+    },
+    "homepage": "https://github.com/looktheworld/antd-theme#readme"
+}

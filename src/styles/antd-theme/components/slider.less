@@ -1,0 +1,34 @@
+body {
+    .ant-slider,
+    .ant-slider:hover {
+        .ant-slider-step,
+        .ant-slider-rail,
+        .ant-slider-track {
+            border-radius: @aibp-slider-border-radius;
+        }
+        .ant-slider-handle {
+            border: 1px solid @primary-color;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            box-shadow: none;
+            &::after {
+                content: ' ';
+                position: absolute;
+                top: 5px;
+                left: 4.5px;
+                width: 5px;
+                height: 4px;
+                background-color: @slider-rail-background-color;
+            }
+        }
+        &.ant-slider-disabled {
+            .ant-slider-handle {
+                border-color: @aibp-disabled-border !important;
+                &::after {
+                    background-color: @border-color-base;
+                }
+            }
+        }
+    }
+}

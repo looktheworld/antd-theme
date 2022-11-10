@@ -1,0 +1,57 @@
+/**
+ * tooltip和popover样式覆盖
+ */
+body {
+    .ant-tooltip,
+    .ant-popover {
+        .ant-tooltip-arrow,
+        .ant-popover-arrow {
+            &::before {
+                box-shadow: @shadow-1;
+            }
+        }
+        .ant-tooltip-inner {
+            box-shadow: @shadow-1;
+            border-radius: @border-radius-base;
+            padding: 8px;
+            min-height: 30px;
+            line-height: 22px;
+            *:not(a) {
+                font-size: 12px;
+            }
+        }
+        .ant-popover-message {
+            & > .anticon {
+                top: 7px;
+            }
+        }
+        .ant-popover-buttons {
+            margin-bottom: 0;
+        }
+        .ant-popover-title {
+            line-height: 14px;
+            border-bottom: none;
+        }
+        .ant-popover-inner {
+            border-radius: @border-radius-base;
+            box-shadow: @shadow-1;
+        }
+        .ant-popover-inner-content {
+            padding: @aibp-popover-padding;
+        }
+        &.ant-tooltip-placement-right,
+        &.ant-tooltip-placement-rightTop,
+        &.ant-tooltip-placement-rightBottom {
+            .ant-tooltip-arrow {
+                left: -5px;
+            }
+        }
+        &.ant-tooltip-placement-left,
+        &.ant-tooltip-placement-leftTop,
+        &.ant-tooltip-placement-leftBottom {
+            .ant-tooltip-arrow {
+                right: -5px;
+            }
+        }
+    }
+}

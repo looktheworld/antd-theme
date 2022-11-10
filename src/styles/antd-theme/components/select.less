@@ -1,0 +1,180 @@
+body {
+    .ant-select {
+        &.ant-select-focused.ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
+        &:not(.ant-select-disabled):hover .ant-select-selector {
+            box-shadow: none;
+        }
+        &.ant-select-focused,
+        &.ant-select-open {
+            .ant-select-arrow {
+                color: @primary-color;
+            }
+        }
+        &.ant-select-open {
+            .ant-select-arrow-icon {
+                transform: rotate(180deg) !important;
+                transition: transform .3s;
+            }
+        }
+
+        &.ant-select-disabled {
+            .ant-select-selection {
+                border-color: @border-color-base;
+                background: @aibp-select-disabled-bg;
+                .ant-select-arrow {
+                    color: @border-color-base;
+                }
+                &:focus,
+                &:active,
+                &:hover {
+                    border-color: @border-color-split;
+                    .ant-select-arrow {
+                        color: @border-color-base;
+                    }
+                }
+                &,
+                &.ant-select-selection--multiple > .ant-select-selection__rendered > ul > li.ant-select-selection__choice {
+                    color: @aibp-disabled-color;
+                }
+            }
+            .ant-select-selection-selected-value {
+                color: @text-color-secondary;
+            }
+        }
+        .ant-select-selection {
+            border-radius: @border-radius-base;
+            border-color: @border-color-base;
+            box-shadow: none !important;
+            &:focus,
+            &:active,
+            &:hover {
+                border-color: @primary-color;
+                .ant-select-arrow {
+                    color: @primary-color;
+                }
+            }
+            &:active {
+                background-color: rgba(17, 142, 238, .05);
+            }
+            &.ant-select-selection--single {
+                height: 32px;
+            }
+            &.ant-select-selection--multiple {
+                min-height: 32px;
+                padding-bottom: 0;
+                & > .ant-select-selection__rendered {
+                    margin-left: 12px;
+                    .ant-select-selection__placeholder {
+                        margin-left: 0;
+                    }
+                    & > ul > li {
+                        margin-top: 3px;
+                        margin-bottom: 2px;
+                        border-radius: @border-radius-base;
+                        &.ant-select-selection__choice {
+                            border: none;
+                            background-color: @aibp-gray-light-color;
+                            color: #000;
+                            line-height: 24px;
+                            .ant-select-selection__choice__remove {
+                                .anticon {
+                                    color: #999;
+                                }
+                                &:hover {
+                                    .anticon {
+                                        color: @primary-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ant-select-selection__choice__remove {
+                    .anticon,
+                    .anticon * {
+                        font-size: 14px;
+                        height: 14px;
+                        width: 14px;
+                    }
+                }
+            }
+            .ant-select-selection__rendered {
+                margin-left: 12px;
+                line-height: 32px;
+            }
+            .ant-select-selection__placeholder {
+                color: @aibp-disabled-color;
+            }
+            .ant-select-selection__clear {
+                right: 7px;
+            }
+            .ant-select-arrow {
+                color: @text-color-secondary;
+                right: 7px;
+                margin-top: -7px;
+                .anticon,
+                .anticon * {
+                    font-size: 12px;
+                    height: 14px;
+                    width: 12px;
+                }
+            }
+        }
+        &.ant-select-auto-complete {
+            .ant-input:hover {
+                border-color: @primary-color;
+            }
+        }
+        &.ant-select-show-search {
+            .ant-select-selection--single,
+            .ant-select-selection--multiple {
+                & > .ant-select-selection__rendered {
+                    margin-left: 0;
+                    .ant-select-selection__placeholder {
+                        margin-left: 12px;
+                    }
+                    .ant-select-search__field {
+                        padding: 0 12px;
+                    }
+                }
+            }
+        }
+    }
+    .ant-select-dropdown {
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .15);
+        .ant-select-item-option {
+            &.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+                background-color: #eaf6fe;
+            }
+            &.ant-select-item-option-active {
+                background-color: transparent;
+                color: @primary-color;
+            }
+            &.ant-select-item-option-selected {
+                color: @primary-color;
+                font-weight: normal;
+            }
+        }
+        .ant-select-dropdown-menu-item {
+            padding: 5px 12px;
+            &-selected {
+                color: @primary-color;
+                background: #fff;
+                font-weight: 400;
+            }
+            &-disabled {
+                color: @aibp-disabled-color;
+            }
+        }
+        &-menu-item-group {
+            &-title {
+                padding: 0 12px;
+            }
+            &-list {
+                .ant-select-dropdown-menu-item {
+                    padding: 5px 12px 5px 24px;
+                }
+            }
+        }
+    }
+}

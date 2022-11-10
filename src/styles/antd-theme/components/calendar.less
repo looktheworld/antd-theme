@@ -1,0 +1,166 @@
+body {
+    .ant-calendar-picker {
+        .ant-calendar-picker-input {
+            &,
+            .ant-calendar-range-picker-input {
+                &::-webkit-input-placeholder {
+                    color: @aibp-disabled-color;
+                }
+            }
+            .ant-calendar-range-picker-separator {
+                color: @aibp-disabled-color;
+            }
+            &.ant-input-disabled {
+                border-color: @aibp-disabled-border;
+                background-color: @aibp-disabled-bg;
+                &,
+                .ant-calendar-range-picker-input,
+                .ant-calendar-range-picker-separator {
+                    color: @text-color-secondary;
+                    &::-webkit-input-placeholder {
+                        color: @aibp-disabled-color;
+                    }
+                }
+                & + .anticon,
+                & + .anticon *,
+                .anticon,
+                .anticon * {
+                    color: @border-color-base;
+                }
+            }
+        }
+        .anticon {
+            position: absolute !important;
+            right: 10px;
+            font-size: 14px;
+            height: 14px;
+            width: 14px;
+            color: @aibp-cascader-icon-color;
+        }
+    }
+    .ant-calendar-picker-container {
+        position: absolute;
+        width: 0;
+        height: 0;
+        .ant-calendar {
+            top: 36px;
+            border-radius: @aibp-cascader-border-radius;
+            .ant-calendar-input-wrap,
+            .ant-calendar-range-middle {
+                display: none;
+            }
+            .ant-calendar-header {
+                border-bottom: none;
+                .ant-calendar-prev-year-btn,
+                .ant-calendar-prev-month-btn,
+                .ant-calendar-next-year-btn,
+                .ant-calendar-next-month-btn,
+                .ant-calendar-year-panel-prev-decade-btn,
+                .ant-calendar-year-panel-next-decade-btn {
+                    &::before,
+                    &::after {
+                        border-color: @text-color-secondary;
+                    }
+                }
+                .ant-calendar-ym-select * {
+                    font-weight: normal;
+                    &:hover {
+                        color: @primary-color;
+                    }
+                }
+            }
+            .ant-calendar-body,
+            .ant-calendar-year-panel-body,
+            .ant-calendar-month-panel-body {
+                border-top: none;
+                padding: 0 10px 10px 10px;
+
+                .ant-calendar-column-header {
+                    padding-right: 4px;
+                }
+                .ant-calendar-month-panel-cell {
+                    .ant-calendar-month-panel-month {
+                        min-width: 48px;
+                    }
+                }
+                .ant-calendar-year-panel-cell {
+                    .ant-calendar-year-panel-year {
+                        width: 50px;
+                    }
+                }
+                .ant-calendar-cell,
+                .ant-calendar-year-panel-cell,
+                .ant-calendar-month-panel-cell {
+                    padding: 0;
+                    height: 24px;
+                    .ant-calendar-date,
+                    .ant-calendar-year-panel-year,
+                    .ant-calendar-month-panel-month {
+                        border-radius: @aibp-cascader-border-radius;
+                        color: @text-color;
+                        &:active {
+                            background-color: @primary-color;
+                            color: #fff;
+                        }
+                    }
+                    &.ant-calendar-today {
+                        .ant-calendar-date {
+                            border-color: @primary-color;
+                            background-color: #fff;
+                            color: @primary-color;
+                        }
+                    }
+                    &.ant-calendar-selected-day,
+                    &.ant-calendar-year-panel-selected-cell,
+                    &.ant-calendar-month-panel-selected-cell {
+                        .ant-calendar-date,
+                        .ant-calendar-year-panel-year,
+                        .ant-calendar-month-panel-month {
+                            border-color: @primary-color;
+                            background-color: @primary-color;
+                            color: #fff;
+                        }
+                    }
+                    &.ant-calendar-in-range-cell {
+                        &::before {
+                            top: 0;
+                            bottom: 0;
+                            background: @cascader-item-selected-bg;
+                        }
+                    }
+                    &.ant-calendar-next-month-btn-day,
+                    &.ant-calendar-last-month-cell {
+                        .ant-calendar-date {
+                            color: @text-color-secondary;
+                        }
+                    }
+                }
+            }
+            .ant-calendar-year-panel-body {
+                border: none;
+                .ant-calendar-year-panel-cell {
+                    .ant-calendar-year-panel-year {
+                        border-radius: @aibp-cascader-border-radius;
+                    }
+                }
+            }
+            .ant-calendar-footer {
+                border-top: none;
+                line-height: 30px;
+                .ant-calendar-footer-btn {
+                    .ant-calendar-ok-btn {
+                        border-color: @primary-color;
+                        border-radius: @aibp-cascader-border-radius;
+                        background-color: @primary-color;
+                        font-size: 12px;
+                        &.ant-calendar-ok-btn-disabled {
+                            border-color: @border-color-split;
+                            background: @aibp-gray-light-color;
+                            color: #aaa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

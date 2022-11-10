@@ -1,0 +1,98 @@
+body {
+    .ant-tabs {
+        .ant-tabs-tab {
+            &.ant-tabs-tab-active {
+                font-weight: @font-weight-base;
+            }
+            &.ant-tabs-tab-disabled {
+                color: @aibp-disabled-color;
+            }
+        }
+        &:not(.ant-tabs-card) {
+            .ant-tabs-bar {
+                .ant-tabs-nav {
+                    .ant-tabs-tab {
+                        line-height: 20px;
+                        padding: 10px 0;
+                    }
+                }
+                .ant-tabs-nav-container-scrolling {
+                    .ant-tabs-tab-arrow-show {
+                        color: @text-color-secondary;
+                        .ant-tabs-tab-prev-icon,
+                        .ant-tabs-tab-next-icon {
+                            margin-top: 2px;
+                            font-weight: @font-weight-base;
+                        }
+                        &.ant-tabs-tab-btn-disabled {
+                            color: @aibp-disabled-color;
+                        }
+                    }
+                }
+            }
+            &.ant-tabs-vertical {
+                .ant-tabs-bar {
+                    .ant-tabs-nav {
+                        .ant-tabs-tab {
+                            padding-right: 16px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    &.ant-tabs-right-bar {
+                        .ant-tabs-tab {
+                            padding-left: 16px;
+                        }
+                    }
+                }
+                .ant-tabs-nav-container-scrolling {
+                    .ant-tabs-tab-arrow-show {
+                        .ant-tabs-tab-prev-icon,
+                        .ant-tabs-tab-next-icon {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &.ant-tabs-card {
+            .ant-tabs-bar {
+                .ant-tabs-nav {
+                    .ant-tabs-tab {
+                        line-height: 20px;
+                        padding: 6px 15px;
+                    }
+                }
+                .ant-tabs-nav-container-scrolling {
+                    .ant-tabs-tab-arrow-show {
+                        color: @text-color-secondary;
+                        .ant-tabs-tab-prev-icon,
+                        .ant-tabs-tab-next-icon {
+                            margin-top: 2px;
+                            font-weight: @font-weight-base;
+                        }
+                        &.ant-tabs-tab-btn-disabled {
+                            color: @aibp-disabled-color;
+                        }
+                    }
+                }
+                &.ant-tabs-left-bar {
+                    .ant-tabs-extra-content {
+                        text-align: right;
+                    }
+                }
+                &.ant-tabs-right-bar {
+                    .ant-tabs-extra-content {
+                        text-align: left;
+                    }
+                }
+                .ant-tabs-extra-content {
+                    .ant-tabs-new-tab {
+                        top: 2px;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+body {
+    .ant-btn {
+        padding: 0 12px;
+        vertical-align: middle;
+        height: 32px;
+        line-height: 32px;
+        min-width: 68px;
+        span {
+            font-size: @font-size-base;
+        }
+        .anticon + span,
+        span + .anticon {
+            margin-left: 6px;
+        }
+        .anticon,
+        .anticon * {
+            height: 32px;
+            font-size: @font-size-base;
+            line-height: 32px;
+            vertical-align: top;
+        }
+        .anticon::after {
+            position: static;
+            height: 32px;
+        }
+        &.ant-btn-sm {
+            padding: 0 8px;
+            min-width: 48px;
+            height: 24px;
+            line-height: 24px;
+            span {
+                line-height: 24px;
+            }
+            .anticon,
+            .anticon * {
+                height: 24px;
+                line-height: 24px;
+            }
+        }
+        &.ant-btn-lg {
+            padding: 0 16px;
+            height: 40px;
+            line-height: 40px;
+            min-width: 88px;
+            * {
+                font-size: 14px;
+            }
+            .anticon,
+            .anticon * {
+                height: 40px;
+                font-size: 16px;
+                line-height: 40px;
+            }
+        }
+        // normal
+        &,
+        &.ant-btn-normal {
+            background: #fff;
+            &:not(.ant-btn-link):hover {
+                border-color: @primary-color;
+                background: #fff;
+                color: @primary-color;
+            }
+            &:active,
+            &.active {
+                border-color: @primary-color;
+                background: rgba(17, 142, 238, .05);
+                color: @primary-color;
+            }
+            &[disabled]:not(.ant-btn-link),
+            &[disabled]:not(.ant-btn-link):hover {
+                border-color: @aibp-btn-default-disabled-bg;
+                background: @aibp-btn-default-disabled-bg;
+                color: @aibp-btn-default-disabled-color;
+            }
+        }
+        // primary
+        &.ant-btn-primary {
+            border-color: @primary-color;
+            background: @primary-color;
+            color: #fff;
+            &:hover {
+                border-color: @aibp-btn-primary-hover-bg;
+                background: @aibp-btn-primary-hover-bg;
+                color: #fff;
+            }
+            &:active,
+            &.active {
+                border-color: @aibp-btn-primary-focus-bg;
+                background: @aibp-btn-primary-focus-bg;
+                color: #fff;
+            }
+            &[disabled],
+            &[disabled]:hover {
+                border-color: @aibp-btn-primary-disabled-bg;
+                background: @aibp-btn-primary-disabled-bg;
+                color: @aibp-btn-primary-disabled-color;
+            }
+        }
+        // danger
+        &.ant-btn-dangerous,
+        &.ant-btn-danger {
+            border-color: @error-color;
+            background: @error-color;
+            color: #fff;
+            &:hover {
+                border-color: @aibp-btn-danger-hover-bg;
+                background: @aibp-btn-danger-hover-bg;
+                color: #fff;
+            }
+            &:active,
+            &.active {
+                border-color: @aibp-btn-danger-focus-bg;
+                background: @aibp-btn-danger-focus-bg;
+                color: #fff;
+            }
+            &[disabled],
+            &[disabled]:hover {
+                border-color: @aibp-btn-danger-disabled-bg;
+                background: @aibp-btn-danger-disabled-bg;
+                color: @aibp-btn-danger-disabled-color;
+            }
+        }
+        &.ant-btn-link {
+            &:hover {
+                color: @aibp-btn-link-hover-color;
+            }
+            &:focus,
+            &:active,
+            &.active {
+                border-color: @white;
+                background: none;
+                color: @aibp-btn-link-focus-color;
+            }
+            &[disabled],
+            &[disabled]:hover {
+                color: @aibp-disabled-color;
+            }
+        }
+        &.ant-btn-icon-only {
+            min-width: 40px;
+            font-size: @font-size-base;
+            &.ant-btn-circle {
+                padding-left: 9px;
+                padding-right: 9px;
+            }
+            .anticon,
+            .anticon * {
+                height: inherit;
+                font-size: inherit;
+                line-height: inherit;
+                vertical-align: inherit;
+            }
+        }
+        &.ant-btn-circle {
+            min-width: initial;
+        }
+    }
+}

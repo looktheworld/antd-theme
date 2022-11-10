@@ -1,0 +1,103 @@
+body {
+    .ant-form {
+        .ant-col-offset-4 {
+            margin-left: 9em;
+        }
+        .ant-col-sm-20 {
+            width: calc(100% - 10em);
+        }
+        input[type='file'],
+        input[type='radio'],
+        input[type='checkbox'] {
+            &:focus,
+            &:focus-within {
+                outline: none !important;
+            }
+        }
+        & > .ant-form-item,
+        & > div > .ant-form-item {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+            &:not(:first-child) {
+                margin-top: 24px;
+            }
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+        .ant-form-item-label {
+            padding-left: 10px;
+            width: 9em;
+            text-align: left;
+            label {
+                font-size: 12px;
+            }
+        }
+        .ant-form-item-required::before {
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            transform: translate(0, -50%);
+        }
+        .ant-form-item-control {
+            // 修改acud cascader placeholder颜色
+            .acud-cascader-picker {
+                .acud-cascader-input input::-webkit-input-placeholder {
+                    color: @input-placeholder-color;
+                }
+            }
+            &.has-error {
+                .ant-input,
+                .ant-input-group-addon,
+                .ant-select .ant-select-selection,
+                .acud-cascader-picker {
+                    border-color: @error-color;
+                    color: @error-color;
+                    &::-webkit-input-placeholder,
+                    .acud-cascader-input input::-webkit-input-placeholder {
+                        color: @aibp-disabled-color;
+                    }
+                }
+                .ant-select-arrow,
+                .acud-cascader-picker-arrow {
+                    color: @error-color;
+                }
+                .ant-calendar-picker {
+                    &,
+                    .ant-calendar-range-picker-input {
+                        &::-webkit-input-placeholder {
+                            color: @aibp-disabled-color;
+                        }
+                    }
+                    .ant-calendar-range-picker-separator,
+                    .ant-calendar-picker-icon * {
+                        color: @error-color !important;
+                    }
+                }
+            }
+        }
+        .du-form-item-dynamic {
+            padding: 0;
+            padding-top: 10px;
+        }
+        .ant-form-explain {
+            color: @error-color;
+        }
+    }
+    .ant-form-extra,
+    .ant-form-explain {
+        margin-top: 2px;
+        padding: 0;
+        min-height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        &.ant-form-explain {
+            color: @error-color !important;
+        }
+    }
+}

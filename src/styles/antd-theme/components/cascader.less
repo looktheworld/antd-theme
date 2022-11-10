@@ -1,0 +1,28 @@
+body {
+    .ant-cascader-picker {
+        .ant-cascader-picker-arrow {
+            position: absolute;
+            font-size: 12px;
+            width: 12px;
+            height: 12px;
+        }
+        .ant-cascader-picker-label:hover + .ant-cascader-input {
+            border-color: @border-color-split;
+        }
+        .ant-cascader-input,
+        .ant-cascader-picker-label {
+            padding-left: 12px;
+        }
+        .ant-cascader-input {
+            border-radius: @aibp-cascader-border-radius;
+        }
+    }
+    .ant-cascader-menus {
+        border-radius: @aibp-cascader-border-radius;
+        .ant-cascader-menu {
+            &-item {
+                padding-left: 12px;
+            }
+        }
+    }
+}

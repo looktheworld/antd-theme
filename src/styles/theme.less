@@ -1,0 +1,258 @@
+// 基于antd主题的样式变量，所有可配置变量见：https://github.com/ant-design/ant-design/blob/3.x-stable/components/style/themes/default.less
+// aibp-开头的变量为自定义变量，非antd支持的变量
+
+@import './antd-theme/common/config.less';
+
+// Colors
+@primary-color: @blue-base;
+@info-color: @blue-base;
+@success-color: @green-base;
+@processing-color: @primary-color;
+@error-color: @red-base;
+@highlight-color: @error-color;
+@warning-color: @orange-base;
+@link-color: @primary-color;
+
+@aibp-gray-light-color: #F5F5F5;
+
+// 禁用对应的颜色
+@aibp-disabled-color: @G6; // 禁用文本
+@aibp-disabled-border: @G8; // 禁用边框
+@aibp-disabled-bg: @G10; // 禁用背景
+@disabled-color: @aibp-disabled-color;
+@disabled-disabled-bg-dark: @G9;
+
+@white: #fff;
+@black: #000;
+@body-background: #fff;
+@component-background: #fff;
+@aibp-component-dark-background: #F6F7FB;
+@heading-color: @G2;
+
+// 字色
+@text-color: @G2; // 文本色
+@text-color-secondary: @G5; // 次文本色
+// 文号
+@font-size-base: 12px;
+@font-size-lg: @font-size-base + 2px;
+// 字重
+@font-weight-base: 400;
+
+// Layout
+@aibp-layout-header-light-background: @white;
+@aibp-layout-header-dark-background: #1E1F20;
+@aibp-layout-selected-background: @B0;
+@aibp-layout-sider-width: 180px; // 侧边导航栏的宽度
+@aibp-layout-sider-collapsed-width: 60px; // 侧边导航栏收起后的宽度
+@aibp-layout-sider-z-index: 999; // 左侧侧边栏层级
+@aibp-layout-header-z-index: 1000; // 顶部导航栏层级
+@aibp-layout-siderbar-item-height: 40px; // 侧边导航栏菜单项高度
+@aibp-layout-siderbar-item-font: 12px; // 侧边导航栏菜单项字体大小
+@aibp-layout-sidebar-title-height: 50px; // 侧边导航栏title高度
+@aibp-layout-label-color: @G4; // gridview的label
+@layout-body-background: @body-background;
+@layout-footer-background: @white;
+@layout-header-height: 60px;
+@layout-header-padding: 0 30px;
+@layout-sider-background: #fff;
+@layout-trigger-height: 40px;
+@layout-trigger-background: @B0;
+@layout-trigger-color: @text-color-secondary; // 收缩的icon颜色
+@layout-browser-warning-height: 40px;
+
+// Border
+@border-radius-base: @R3;
+@border-color-base: @G8;
+@border-color-split: @G8;
+
+// Alert
+@alert-success-bg-color: @S1;
+@alert-success-icon-color: @success-color;
+@alert-warning-bg-color: @W1;
+@alert-warning-icon-color: @warning-color;
+@alert-error-bg-color: @E1;
+@alert-error-icon-color: @error-color;
+@alert-info-bg-color: @B1;
+@alert-info-icon-color: @primary-color;
+
+// Badge
+@badge-dot-size: 8px;
+@badge-status-size: 8px;
+
+// Buttons
+@btn-border-radius-base: @border-radius-base;
+@aibp-btn-primary-hover-bg: @B5;
+@aibp-btn-primary-focus-bg: @B7;
+@aibp-btn-primary-disabled-bg: @aibp-disabled-bg;
+@aibp-btn-primary-disabled-color: @aibp-disabled-color;
+@aibp-btn-primary-disabled-border-color: @offConfig;
+@btn-default-color: @text-color;
+@aibp-btn-default-hover-border-color: @primary-color;
+@aibp-btn-default-focus-bg: @G11;
+@aibp-btn-default-disabled-bg: @aibp-disabled-bg;
+@aibp-btn-default-disabled-color: @aibp-disabled-color;
+@aibp-btn-default-disabled-border-color: @offConfig;
+@btn-danger-color: #fff;
+@aibp-btn-danger-hover-bg: @E5;
+@aibp-btn-danger-focus-bg: @E7;
+@aibp-btn-danger-disabled-bg: @aibp-disabled-bg;
+@aibp-btn-danger-disabled-color: @aibp-disabled-color;
+@aibp-btn-danger-disabled-border-color: @offConfig;
+@aibp-btn-link-color: @primary-color;
+@aibp-btn-link-hover-color: @B5;
+@aibp-btn-link-focus-color: @B7;
+@btn-padding-horizontal-base: 10px;
+@button-normal-width: 68px;
+@button-normal-height: 30px;
+@button-big-width: 96px;
+@button-big-height: 40px;
+
+// Calendar
+@calendar-bg: @component-background;
+
+// Card
+@card-padding-base: 20px;
+@aibp-card-border-radius: @R4;
+
+// Cascader
+@aibp-cascader-border-radius: @R3;
+@aibp-cascader-icon-color: @G7;
+@cascader-item-selected-bg: @B1;
+
+// Checkbox
+@aibp-checkbox-disabled-bg: @G7; // 禁用背景色
+@aibp-checkbox-disabled-color: @G7; // 禁用字色
+@checkbox-size: 16px;
+@checkbox-border-radius: @R2;
+
+// Collapse
+@aibp-collapse-header-disabled-bg: @aibp-disabled-bg; // 禁用header背景
+@aibp-collapse-header-disabled-color: @aibp-disabled-color; // 禁用header字色
+@aibp-collapse-border-radius: 3px; // 圆角
+@collapse-header-bg: @G9;
+@collapse-panel-border-radius: @border-radius-base; //CollapsePanel
+
+// DatePicker
+@time-picker-panel-column-width: 56px;
+
+// Drawer
+@aibp-drawer-close-color: @G5; // close icon颜色
+@drawer-header-padding: 16px 24px;
+@drawer-body-padding: 24px;
+
+// Dropdown
+@dropdown-selected-bg: @B1;
+@aibp-dropdown-border-radius: @border-radius-base; // 圆角
+
+// Form
+@aibp-form-item-label-width: 100px;
+@aibp-form-control-width: 320px;
+@aibp-form-label-color: @G4; // 表单项的label字体色
+@aibp-form-title-color: @text-color; // 表单的title字体色
+
+// Input
+@aibp-input-addon-bg: @G10;
+@aibp-input-disabled-bg: @aibp-disabled-bg;
+@input-height-base: 32px;
+@input-height-lg: 36px;
+@input-height-sm: 24px;
+@input-placeholder-color: @G6;
+@input-color: @text-color;
+@input-border-color: @border-color-base;
+@input-hover-border-color: @primary-color;
+
+// Radio
+@aibp-radio-disabled-border: @aibp-disabled-border;
+@aibp-radio-disabled-bg: @aibp-disabled-bg;
+@aibp-radio-disabled-checked-color: @G5;
+@aibp-radio-disabled-color: @G7;
+@radio-size: 16px;
+@radio-dot-color: @primary-color;
+
+// Select
+@aibp-select-disabled-bg: @aibp-disabled-bg;
+@select-border-color: @border-color-base;
+@select-item-active-bg: @B1;
+
+// Message
+@aibp-message-border-radius: 2px;
+@message-notice-content-padding: 6px 16px;
+
+// Modal
+@modal-header-bg: #fff;
+
+// Pagination
+@pagination-item-size: 32px;
+@pagination-item-size-sm: 24px;
+@pagination-font-weight-active: 400;
+@pagination-item-bg-active: @component-background;
+
+// Progress
+@progress-default-color: @primary-color;
+@progress-text-color: @text-color;
+@progress-radius: @border-radius-base;
+
+// Slider
+@aibp-slider-border-radius: 2px;
+@slider-rail-background-color: @G8;
+@slider-rail-background-color-hover: @G8;
+@slider-track-background-color: @primary-color;
+@slider-track-background-color-hover: @primary-color;
+@slider-disabled-color: @aibp-disabled-color;
+@slider-disabled-background-color: @aibp-disabled-bg;
+
+// Spin
+@spin-dot-size-sm: 14px;
+@spin-dot-size: 20px;
+@spin-dot-size-lg: 32px;
+
+// Popover
+@popover-min-height: 14px;
+
+// Steps
+@steps-icon-size: 24px;
+@steps-small-icon-size: 20px;
+
+// Switch
+@aibp-switch-default-bg: @G7;
+@aibp-switch-hover-bg: @G6;
+@aibp-switch-checked-hover-bg: @B7;
+@aibp-switch-checked-disabled-bg: @B2;
+@switch-height: 20px;
+@switch-sm-height: 16px;
+@switch-disabled-opacity: 1;
+
+// Table
+@aibp-table-filter-active: @B7;// filter图标激活状态
+@table-header-bg: @G10;
+@table-header-color: @G4;
+@table-header-icon-color: @text-color-secondary;
+@table-row-hover-bg: @B1;
+@table-selection-column-width: 28px;
+
+// Tabs
+@tabs-title-font-size: @font-size-base;
+@tabs-card-head-background: #fff;
+@tabs-card-height: 32px;
+@tabs-card-gutter: 10px;
+
+// Tag
+@aibp-tag-hover-bg: @G9;
+@tag-default-bg: @G10;
+@tag-default-color: @text-color;
+@tag-font-size: @font-size-base;
+
+// TimePicker
+@aibp-timePicker-selected-bg: @B1;
+
+// Tooltip
+@tooltip-color: @text-color;
+@tooltip-bg: #fff;
+@tooltip-arrow-width: 5px;
+@tooltip-color: @text-color;
+
+// Popover
+@aibp-popover-padding: 12px;
+
+// Upload
+@aibp-upload-error-color: @red-base;

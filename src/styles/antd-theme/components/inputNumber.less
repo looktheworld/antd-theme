@@ -1,0 +1,130 @@
+body {
+    .ant-input-number {
+        margin-right: 10px;
+        border-radius: @border-radius-base;
+        border-color: @border-color-base;
+        width: 73px;
+        height: 32px;
+        box-shadow: none;
+
+        input {
+            color: @text-color;
+        }
+
+        .ant-input-number-input {
+            padding: 0 12px;
+            height: 32px;
+        }
+
+        &:hover {
+            border-color: @primary-color;
+        }
+        &.ant-input-number-disabled {
+            border-color: @border-color-split;
+            background-color: @aibp-gray-light-color;
+            &,
+            input {
+                color: @aibp-disabled-color;
+            }
+            .ant-input-number-handler-wrap {
+                display: none;
+                border-color: @border-color-split;
+                background-color: @aibp-gray-light-color;
+                .ant-input-number-handler {
+                    top: -2px;
+                    .anticon,
+                    .anticon * {
+                        color: @border-color-base;
+                    }
+                    &:hover {
+                        background-color: transparent;
+                        .anticon,
+                        .anticon * {
+                            color: @border-color-base;
+                        }
+                    }
+                }
+            }
+        }
+        .ant-input-number-handler-wrap {
+            display: block;
+            border-color: @border-color-base;
+            width: 20px;
+            opacity: 0;
+            .ant-input-number-handler {
+                position: relative;
+                border-radius: @border-radius-base;
+                border: none;
+                height: 15px !important;
+                .anticon-up {
+                    &::after {
+                        content: "\e88a";
+                        transform: rotate(0) translateY(calc(-50% + 8px));
+                    }
+                }
+                .anticon-down {
+                    &::after {
+                        content: "\e88a";
+                        transform: rotateZ(180deg) translate(-.5px, calc(50% + 2px));
+                    }
+                }
+                &:hover {
+                    .anticon,
+                    .anticon * {
+                        color: @primary-color;
+                    }
+                }
+                &.ant-input-number-handler-up-disabled,
+                &.ant-input-number-handler-down-disabled {
+                    .anticon,
+                    .anticon * {
+                        color: @border-color-base;
+                    }
+                }
+                .ant-input-number-handler-up-inner,
+                .ant-input-number-handler-down-inner {
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    margin: 0;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    color: @text-color-secondary;
+                    font-size: 12px;
+                    width: 11px;
+                    height: 100%;
+                }
+            }
+
+            &:hover {
+                opacity: 1 !important;
+            }
+        }
+        // 设置大小
+        &-lg {
+            height: @input-height-lg;
+            line-height: @input-height-lg;
+            .ant-input-number-input {
+                height: @input-height-lg;
+            }
+            .ant-input-number-handler-wrap {
+                span.ant-input-number-handler {
+                    height: @input-height-lg/2 !important;
+                }
+            }
+        }
+        &-sm {
+            padding: 0 8px;
+            height: @input-height-sm;
+            line-height: @input-height-sm;
+            .ant-input-number-input {
+                height: @input-height-sm;
+            }
+            .ant-input-number-handler-wrap {
+                span.ant-input-number-handler {
+                    height: @input-height-sm/2 !important;
+                }
+            }
+        }
+    }
+}
